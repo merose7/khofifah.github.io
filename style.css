@@ -304,7 +304,7 @@ overflow-x:hidden;
 
 .footer {
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-    padding: 3rem 0;
+    padding: 2rem 0;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     border-top: 3px solid #8a2be2;
@@ -364,6 +364,27 @@ overflow-x:hidden;
     margin-top: 1rem;
 }
 
+/* Footer Styles */
+.footer-social-icon {
+    display: inline-block;
+    margin: 0 12px;
+    font-size: 1.8rem;
+    color: #4ecdc4;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-social-icon:hover {
+    color: #45b7aa;
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    color: #adb5bd;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
 /* Mobile view tetap center */
 @media (max-width: 720px) {
     .footer {
@@ -377,5 +398,13 @@ overflow-x:hidden;
     }
     .footer .row a i {
         margin: 0% 3%;
+    }
+    .footer-social-icon {
+        margin: 0 10px;
+        font-size: 1.5rem;
+    }
+    .footer-nav li {
+        display: block;
+        margin: 10px 0;
     }
 }
