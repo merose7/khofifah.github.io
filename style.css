@@ -1,417 +1,226 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
-html {
+/* =============================
+   General Styles
+============================= */
+body {
+    font-family: 'Play', sans-serif;
+    background-color: #f8f9fc;
+    color: #222831;
     scroll-behavior: smooth;
 }
 
-body {
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2a2a2a 100%);
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
+/* Navbar */
 .navbar {
-    background-color: rgba(42, 42, 42, 0.9);
-    border-bottom: 3px solid #8a2be2;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    background: rgba(76, 63, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: background 0.3s ease-in-out;
 }
 
-.navbar-brand, .nav-link {
-    color: #ffffff !important;
-    font-weight: 500;
-    transition: color 0.3s ease;
+.navbar-brand {
+    font-family: 'Fredoka One', cursive;
+    color: #fff !important;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
 }
 
-.nav-link:hover {
-    color: #8a2be2 !important;
-    transform: translateY(-2px);
+.navbar-nav .nav-link {
+    color: #f2f2f2 !important;
+    margin-left: 15px;
+    transition: color 0.3s;
 }
 
+.navbar-nav .nav-link:hover {
+    color: #FFD700 !important;
+}
+
+/* =============================
+   Hero Section
+============================= */
 .hero {
     height: 100vh;
+    background: linear-gradient(135deg, #4E4FEB, #6C63FF);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #0f0f0f 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%238a2be2" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%238a2be2" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.1;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
-    animation: fadeInUp 1s ease-out;
+    font-family: 'Fredoka One', cursive;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    font-weight: 300;
-    animation: fadeInUp 1s ease-out 0.5s both;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 .btn-custom {
-    background: linear-gradient(45deg, #8a2be2, #6a1b9a);
-    color: #ffffff;
+    background: #FFD700;
+    color: #222831;
     border: none;
-    padding: 0.5rem 1rem;    
-    border-radius: 50px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
-    position: relative;
-    overflow: hidden;
-    margin-right: 15px;
-}
-
-.btn-custom::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.btn-custom:hover::before {
-    left: 100%;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-custom:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5);
-    background: linear-gradient(45deg, #6a1b9a, #8a2be2);
+    background: #fff;
+    color: #4E4FEB;
+    transform: translateY(-2px);
 }
 
+/* =============================
+   Section Base
+============================= */
 .section {
-    padding: 6rem 0;
-    position: relative;
+    padding: 80px 0;
 }
 
+.section h2 {
+    font-family: 'Fredoka One', cursive;
+    color: #4E4FEB;
+    margin-bottom: 30px;
+}
+
+/* =============================
+   About Section
+============================= */
 .profile-img {
     width: 280px;
     height: 280px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 3rem;
-    border: 5px solid #8a2be2;
-    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+    border: 5px solid #4E4FEB;
+    box-shadow: #ffffff;
     transition: transform 0.3s ease;
 }
 
-.profile-img:hover {
-    transform: scale(1.05);
+#about p {
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
+/* =============================
+   Resume Section
+============================= */
+#resume p {
+    color: #333;
+}
+
+#resume .btn-custom {
+    margin: 10px;
+}
+
+/* =============================
+   Projects Section
+============================= */
 .card {
-    background: linear-gradient(135deg, #2a2a2a 0%, #333 100%);
-    border: 2px solid #8a2be2;
+    border: none;
     border-radius: 15px;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(138, 43, 226, 0.4);
-    border-color: #6a1b9a;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
 .card-img-top {
-    height: 220px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
     object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.card:hover .card-img-top {
-    transform: scale(1.1);
-}
-
-.card-body {
-    padding: 1.5rem;
-}
-
-.card-body .btn-custom {
-    display: inline-block;
-    margin-right: 15px;
-    margin-bottom: 10px;
-}
-
-.card-body .btn-custom:last-child {
-    margin-right: 0;
 }
 
 .card-title {
-    color: #8a2be2;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+    color: #4E4FEB;
+    font-weight: bold;
 }
 
-.card-text {
-    color: #cccccc;
-    font-size: 0.95rem;
+/* =============================
+   Contact Section
+============================= */
+#contact h4 {
+    color: #4E4FEB;
+    margin-bottom: 20px;
 }
 
 .form-control {
-    background-color: #333;
-    color: #ffffff;
-    border: 2px solid #8a2be2;
     border-radius: 10px;
-    padding: 0.75rem;
-    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
 }
 
 .form-control:focus {
-    background-color: #333;
-    color: #ffffff;
-    border-color: #6a1b9a;
-    box-shadow: 0 0 0 0.2rem rgba(138, 43, 226, 0.25);
-    transform: translateY(-2px);
+    border-color: #6C63FF;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
 }
 
 .btn-submit {
-    background: linear-gradient(45deg, #8a2be2, #6a1b9a);
-    color: #ffffff;
+    background-color: #4E4FEB;
+    color: #fff;
+    padding: 10px 25px;
     border: none;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-submit:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5);
-    background: linear-gradient(45deg, #6a1b9a, #8a2be2);
-}
-
-.contact-info {
-    margin-top: 2rem;
-    padding: 2rem;
-    background: rgba(42, 42, 42, 0.5);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-}
-
-.contact-info a {
-    color: #8a2be2;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.contact-info a:hover {
-    color: #6a1b9a;
-    text-decoration: underline;
-    transform: translateX(5px);
-}
-
-#resume {
-    background: linear-gradient(135deg, #2a2a2a 0%, #333 100%);
-    border: 2px solid #8a2be2;
-    border-radius: 20px;
-    margin: 3rem auto;
-    max-width: 900px;
-    padding: 3rem;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-#resume::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="resume-pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%238a2be2" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23resume-pattern)"/></svg>');
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-#resume h2 {
-    color: #8a2be2;
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    text-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
-    position: relative;
-    z-index: 1;
-}
-
-#resume p {
-    font-size: 1.3rem;
-    margin-bottom: 2.5rem;
-    color: #cccccc;
-    position: relative;
-    z-index: 1;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    .hero p {
-        font-size: 1.2rem;
-    }
-    .profile-img {
-        width: 200px;
-        height: 200px;
-    }
-    #resume {
-        margin: 2rem 1rem;
-        padding: 2rem;
-    }
-    #resume h2 {
-        font-size: 2.2rem;
-    }
-    #resume p {
-        font-size: 1.1rem;
-    }
-}
-
-.footer {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-    padding: 2rem 0;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    border-top: 3px solid #8a2be2;
-    color: #cccccc;
-}
-
-.footer .row {
-    width: 100%;
-    margin: 1% 0%;
-    padding: 0.6% 0%;
-    color: #cccccc;
-    font-size: 0.9em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.footer .row a {
-    text-decoration: none;
-    color: #8a2be2;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
-
-.footer .row a:hover {
-    color: #6a1b9a;
+    background-color: #6C63FF;
     transform: translateY(-2px);
 }
 
-.footer .row ul {
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center; 
+#status-message {
+    font-weight: bold;
+    color: #4E4FEB;
 }
 
-.footer .row ul li {
-    display: inline-block;
-    margin: 0 1.5rem;
+/* =============================
+   Footer
+============================= */
+.footer {
+    background-color: #222831;
+    color: #EEEEEE;
+    padding: 40px 0 20px;
+    text-align: center;
 }
 
-.footer .row a i {
-    font-size: 2em;
-    margin: 0% 1%;
-    transition: transform 0.3s ease;
-}
-
-.footer .row a:hover i {
-    transform: scale(1.2);
-}
-
-.footer .row:last-child {
-    font-size: 0.8em;
-    color: #888;
-    margin-top: 1rem;
-}
-
-/* Footer Styles */
 .footer-social-icon {
-    display: inline-block;
-    margin: 0 12px;
-    font-size: 1.8rem;
-    color: #8a2be2;
-    transition: all 0.3s ease;
-    text-decoration: none;
+    color: #EEEEEE;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .footer-social-icon:hover {
-    color: #6a1b9a;
-    transform: translateY(-3px);
+    color: #FFD700;
+    transform: scale(1.1);
 }
 
-.footer-copyright {
-    color: #adb5bd;
+.footer p {
+    margin-top: 20px;
     font-size: 0.9rem;
-    margin: 0;
+    color: #AAAAAA;
 }
 
-/* Mobile view tetap center */
-@media (max-width: 720px) {
-    .footer {
-        text-align: center;
-        padding: 5%;
+/* =============================
+   Responsive Design
+============================= */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
     }
-    .footer .row ul li {
-        display: block;
-        margin: 10px 0px;
-        text-align: center;
+
+    .section {
+        padding: 60px 20px;
     }
-    .footer .row a i {
-        margin: 0% 3%;
-    }
-    .footer-social-icon {
-        margin: 0 10px;
-        font-size: 1.5rem;
-    }
-    .footer-nav li {
-        display: block;
-        margin: 10px 0;
+
+    .profile-img {
+        margin-bottom: 20px;
     }
 }
